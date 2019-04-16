@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Future Leaders Challenge - LIVE Competition</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" />
+    <!-- Main Stylesheet: Livestrap -->
+    <link rel="stylesheet" href="/assets/css/livestrap.css" />
+    <style type="text/css">
+      @font-face{
+      	font-family:"futura-pt-bold";
+      	src:url("/assets/font/FuturaPTBold.otf") format("woff"),
+      	url("/assets/font/FuturaPTBold.otf") format("opentype"),
+      	url("/assets/font/FuturaPTBold.otf") format("truetype");
+      }
+      
+      .text-secondary {
+      	font-family: "futura-pt-bold";
+      }
+      
+      .nav-footer a {
+      	color: #000;
+      }
+    </style>
+    <style>
+      .hero-bg-img {
+      	background-repeat: no-repeat;
+        background-attachment: fixed;
+      	background-position: center;
+      	background-size: cover;
+      	opacity: 0.6;
+      	top: 0;
+      	left: 0;
+      	bottom: 0;
+      	right: 0;
+      	position: absolute;
+      	z-index: 5;
+      }
+      
+      .hero-bg-vid {
+      	opacity: 0.6;
+      	top: 50%;
+      	left: 50%;
+      	-webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      	bottom: 0;
+      	right: 0;
+      	position: absolute;
+      	z-index: 5;
+      	min-height: 100%;
+      	min-width: 100%;
+      	overflow: hidden;
+      }
+      
+      .hero-container {
+      	height: 22rem;
+      	position: relative;
+      	overflow: hidden;
+      }
+      
+      .hero-inner {
+      	color: #fff;
+      	position: absolute;
+      	top: 50%;
+      	left: 50%;
+      	transform: translate(-50%, -50%);
+      	z-index: 10;
+      	cursor: default;
+      }
+      
+      .hero-inner h1 {
+      	font-family: "futura-pt-bold", "Nunito Sans", "Avenir", sans-serif;
+      	text-shadow: 1px 1px 2px rgba(83, 83, 86, 0.7);
+      	text-transform: uppercase;
+      	margin: 0;
+      }
+      
+      .hero-inner .subtitle {
+      	font-size: 1.25rem;
+      	text-shadow: 1px 1px 2px rgba(83, 83, 86, 0.7);
+      }
+    </style>
+    <style>
+      #loaded {
+      	display: none;
+      }
+      html, body {
+      	width: 100%;
+      	height: 100%;
+      }
+      #loading {
+      	width: 100%;
+      	height: 100%;
+      	position: relative;
+      }
+      #loading .loading-center {
+      	position: absolute;
+      	top: 50%;
+      	left: 50%;
+      	transform: translate(-50%, -50%);
+      }
+      #loading .loading-center .animate {
+      	-webkit-animation:spin 1.5s linear infinite;
+          		-moz-animation:spin 1.5s linear infinite;
+      	 animation:spin 1.5s linear infinite;
+      	 width: 50px;
+      	 height: 50px;
+      }
+      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loading-center text-center">
+        <img src="/assets/img/brand/icon.png" class="animate" />
+        <noscript>
+          <p class="mt-4">
+            <strong>You need to have JavaScript enabled to view this page.</strong>
+          </p>
+        </noscript>
+      </div>
+    </div>
+    <div id="loaded">
+      <header>
+        <nav class="navbar border-bottom navbar-expand-md navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="/assets/img/brand/icon.png" width="50px" height="50px" class="mb-2" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileDropdown" aria-controls="navbarMobileDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMobileDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link" href="#" id="navbarDropdownOurEvents" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Our Events
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownOurEvents">
+                  <a class="dropdown-item" href="#">LIVE Competition</a>
+                  <a class="dropdown-item active" href="#">Future Leaders Challenge</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Partner With Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Connect With Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="hero-container bg-primary text-center">
+          <div class="hero-bg-img" data-image="/assets/img/hero-bg/future-leaders-challenge.jpg"></div>
+          <!--
+        <video autoplay class="hero-bg-vid">
+            <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'/>
+        </video>
+        -->
+          <div class="hero-inner">
+            <h1 class="title">Future Leaders Challenge</h1>
+            <p class="subtitle">Empowering high school students to become leaders of the future</p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="container py-5">
+          <div class="row text-center mx-md-5">
+            <div class="col">
+              <h2 class="text-secondary text-uppercase">Discover the <span class="text-primary">Leader</span> in You.</h2>
+              <p>Cupcake ipsum dolor sit amet cheesecake muffin. Sweet apple pie cotton candy sweet roll brownie. Pastry chocolate bar cupcake chocolate chocolate bar pie. Gummi bears I love bonbon. Sweet apple pie cotton candy sweet roll brownie.</p>
+              <img src="https://via.placeholder.com/2000x600" class="img-fluid my-4" />
+              <h2 class="text-secondary text-uppercase mt-5 mb-4">1 Day of Limitless Possibility</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md">
+              <img src="https://via.placeholder.com/500x300" class="img-fluid" />
+            </div>
+            <div class="col-md p-5">
+              <h3 class="text-secondary text-uppercase">Innovative Cases</h3>
+              <p>Cupcake ipsum dolor sit amet cheesecake muffin. Sweet apple pie cotton candy sweet roll brownie. Pastry chocolate bar cupcake chocolate chocolate bar pie. Gummi bears I love bonbon.</p>
+            </div>
+          </div>
+          <div class="row mt-md-5">
+            <div class="col-md">
+              <img src="https://via.placeholder.com/500x300" class="img-fluid" />
+            </div>
+            <div class="col-md p-5 order-md-first">
+              <h3 class="text-secondary text-uppercase">Expand Your Network</h3>
+              <p>Cupcake ipsum dolor sit amet cheesecake muffin. Sweet apple pie cotton candy sweet roll brownie. Pastry chocolate bar cupcake chocolate chocolate bar pie. Gummi bears I love bonbon.</p>
+            </div>
+          </div>
+          <div class="row mt-md-5">
+            <div class="col-md">
+              <img src="https://via.placeholder.com/500x300" class="img-fluid" />
+            </div>
+            <div class="col-md p-5">
+              <h3 class="text-secondary text-uppercase">Experience University</h3>
+              <p>Cupcake ipsum dolor sit amet cheesecake muffin. Sweet apple pie cotton candy sweet roll brownie. Pastry chocolate bar cupcake chocolate chocolate bar pie. Gummi bears I love bonbon.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="bg-light py-5 px-3 px-md-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <strong class="text-primary">Social</strong>
+              <ul class="list-unstyled nav-footer">
+                <li><a href="https://www.facebook.com/LIVECompetition/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/livecompetition/" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <strong class="text-primary">Our Events</strong>
+              <ul class="list-unstyled nav-footer">
+                <li><a href="/event/live-competition">LIVE Competition</a></li>
+                <li><a href="/event/future-leaders-challenge">Future Leaders Challenge</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 order-md-first">
+              <img src="/assets/img/brand/icon.png" width="50px" height="50px" class="mb-2" /><br/>
+              <strong>&copy; Copyright 2019 LIVE Competition</strong><br/>
+              <small>All rights reserved.</small>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/assets/js/livestrap.js"></script>
+    <script>
+      $(document).ready(function() {
+      	$("#loading").hide();
+      	$("#loaded").show();
+      });
+    </script>
+  </body>
+</html>
