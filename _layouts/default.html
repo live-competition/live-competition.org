@@ -1,55 +1,55 @@
 <!doctype html>
 <html lang="en-CA">
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      <title>{{ page.title }} - {{ site.title }}</title>
-			<!-- Icons -->
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-			<!-- Fonts -->
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" />
-			<!-- Main Stylesheet: Livestrap -->
-			<link rel="stylesheet" href="/assets/css/livestrap.css" />
-			{% if page.custom_css %}
-				<!-- Page specific stylesheet(s) -->
-				{% for stylesheet in page.custom_css %}
-					<link rel="stylesheet" href="{{ stylesheet }}" />
-				{% endfor %}
-			{% endif %}
-    </head>
-    <body>
-			<div id="loading">
-				<div class="loading-center text-center">
-						<img src="/assets/img/brand/icon.png" class="animate" />
-						<noscript>
-							<p class="mt-4">
-								<strong>You need to have JavaScript enabled to view this page.</strong>
-							</p>
-						</noscript>
-				</div>
-			</div>
-			<div id="loaded">
-				<header>
-					{% include navbar.html %}
-					{% include hero.html %}
-				</header>
-				<main>
-					{{ content }}
-				</main>
-				{% include footer.html %}
-			</div>
-			{% include scripts.html %}
-			<script>
-				$(document).ready(function() {
-					$("#loading").hide();
-					$("#loaded").show();
-				});
-			</script>
-			<!-- Page specific Javascript -->
-			{% if page.custom_js %}
-				{% for script in page.custom_js %}
-					<script src="{{ script }}"></script>
-				{% endfor %}
-			{% endif %}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" />
+    <!-- Main Stylesheet: Livestrap -->
+    <link rel="stylesheet" href="/assets/css/livestrap.css" />
+    {% if page.custom_css %}
+    <!-- Page specific stylesheet(s) -->
+    {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="{{ stylesheet }}" />
+    {% endfor %}
+    {% endif %}
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loading-center text-center">
+        <img src="/assets/img/brand/icon.png" class="animate" />
+        <noscript>
+          <p class="mt-4">
+            <strong>You need to have JavaScript enabled to view this page.</strong>
+          </p>
+        </noscript>
+      </div>
+    </div>
+    <div id="loaded">
+      <header>
+        {% include navbar.html %}
+        {% include hero.html %}
+      </header>
+      <main>
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
+    {% include scripts.html %}
+    <script>
+      $(document).ready(function() {
+        $("#loading").hide();
+        $("#loaded").show();
+      });
+    </script>
+    {% if page.custom_js %}
+    <!-- Page specific Javascript -->
+    {% for script in page.custom_js %}
+    <script src="{{ script }}"></script>
+    {% endfor %}
+    {% endif %}
 	</body>
 </html>

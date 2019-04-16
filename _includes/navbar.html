@@ -1,51 +1,47 @@
 {% if site.data.navigation.main_items %}
 <nav class="navbar border-bottom navbar-expand-md navbar-light">
-    <a class="navbar-brand" href="#">
-        <img src="/assets/img/brand/icon.png" width="50px" height="50px" class="mb-2" />
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileDropdown" aria-controls="navbarMobileDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMobileDropdown">
-        <ul class="navbar-nav ml-auto">
-            {% for item in site.data.navigation.main_items %}
-                {% if page.url == item.url %}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ item.preferred_url }}">{{ item.title }}</a>
-                    </li>
-                {% elsif page.url contains item.url_contains and item.sub_items and item.dropdown_id %}
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link" href="#" id="{{ item.dropdown_id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ item.title }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="{{ item.dropdown_id }}">
-                            {% for sub_item in item.sub_items %}
-                                {% if page.url == sub_item.url %}
-                                    <a class="dropdown-item active" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
-                                {% else %}
-                                    <a class="dropdown-item" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </li>
-                {% elsif item.sub_items and item.dropdown_id %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="{{ item.dropdown_id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ item.title }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="{{ item.dropdown_id }}">
-                            {% for sub_item in item.sub_items %}
-                                <a class="dropdown-item" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
-                            {% endfor %}
-                        </div>
-                    </li>
-                {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ item.preferred_url }}">{{ item.title }}</a>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/brand/icon.png" width="50px" height="50px" class="mb-2" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileDropdown" aria-controls="navbarMobileDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarMobileDropdown">
+    <ul class="navbar-nav ml-auto">
+    {% for item in site.data.navigation.main_items %}
+    {% if page.url == item.url %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ item.preferred_url }}">{{ item.title }}</a>
+      </li>
+    {% elsif page.url contains item.url_contains and item.sub_items and item.dropdown_id %}
+      <li class="nav-item dropdown active">
+        <a class="nav-link" href="#" id="{{ item.dropdown_id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
+        <div class="dropdown-menu" aria-labelledby="{{ item.dropdown_id }}">
+        {% for sub_item in item.sub_items %}
+        {% if page.url == sub_item.url %}
+          <a class="dropdown-item active" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
+        {% else %}
+          <a class="dropdown-item" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
+        {% endif %}
+        {% endfor %}
+        </div>
+      </li>
+    {% elsif item.sub_items and item.dropdown_id %}
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="{{ item.dropdown_id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
+        <div class="dropdown-menu" aria-labelledby="{{ item.dropdown_id }}">
+        {% for sub_item in item.sub_items %}
+          <a class="dropdown-item" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
+        {% endfor %}
+        </div>
+      </li>
+    {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ item.preferred_url }}">{{ item.title }}</a>
+      </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
 </nav>
 {% endif %}

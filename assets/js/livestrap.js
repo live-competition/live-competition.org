@@ -13,7 +13,7 @@ Note that this was tested with only one hero in a page.
 $(document).ready(function() {
     $('.hero-bg-img').each(function(pos, obj) {
         var image = obj.getAttribute("data-image");
-       $(obj).css("background-image", "url('" + image + "')");
+        $(obj).css("background-image", "url('" + image + "')");
     });
 });
 
