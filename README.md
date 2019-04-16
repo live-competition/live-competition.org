@@ -22,8 +22,8 @@ The main website for LIVE Competition hosted on *[Github Pages](#github-pages)* 
 │   |   ├── ...
 │   |   └── hero-bg
 │   └── js
-│   |   ├── ...
-│   |   └── livestrap.js
+│       ├── ...
+│       └── livestrap.js
 |── event
 │   ├── future-leaders-challenge.html
 │   └── live-competition.html
@@ -31,7 +31,7 @@ The main website for LIVE Competition hosted on *[Github Pages](#github-pages)* 
 ├── CNAME
 |── 404.html
 |── index.html
-|── ...
+|── ... (HTML or MD files)
 ├── Gemfile
 ├── Gemfile.lock
 └── README.md
