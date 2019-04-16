@@ -1,0 +1,23 @@
+main_items:
+- title: Home
+  url: /index.html
+  preferred_url: index
+- title: Our Events
+  dropdown_id: mainItemsDropdownOurEvents
+  url_contains: /event
+  sub_items:
+    - title: LIVE Competition
+      url: /event/live-competition.html
+      preferred_url: /event/live-competition
+    - title: Future Leaders Challenge
+      url: /event/future-leaders-challenge.html
+      preferred_url: /event/future-leaders-challenge
+- title: Our Team
+  url: /our-team.html
+  preferred_url: /our-team
+- title: Partner With Us
+  url: /partner-with-us.html
+  preferred_url: /partner-with-us
+- title: Connect With Us
+  url: /connect-with-us.html
+  preferred_url: /connect-with-us

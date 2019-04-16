@@ -1,3 +1,4 @@
+{% if site.data.navigation.main_items %}
 <nav class="navbar border-bottom navbar-expand-md navbar-light">
     <a class="navbar-brand" href="#">
         <img src="/assets/img/brand/icon.png" width="50px" height="50px" class="mb-2" />
@@ -7,55 +8,44 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarMobileDropdown">
         <ul class="navbar-nav ml-auto">
-            {% if page.url == "/index.html" %}
-                <li class="nav-item active">
-            {% else %}
-                <li class="nav-item">
-            {% endif %}
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            {% if page.url contains "/event/" %}
-                <li class="nav-item dropdown active">
-            {% else %}
-                <li class="nav-item dropdown">
-            {% endif %}
-                <a class="nav-link" href="#" id="navbarDropdownOurEvents" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Our Events
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownOurEvents">
-                    {% if page.url == "/event/live-competition.html" %}
-                        <a class="dropdown-item active" href="#">LIVE Competition</a>
-                    {% else %}
-                        <a class="dropdown-item" href="#">LIVE Competition</a>
-                    {% endif %}
-                    {% if page.url == "/event/future-leaders-challenge.html" %}
-                        <a class="dropdown-item active" href="#">Future Leaders Challenge</a>
-                    {% else %}
-                        <a class="dropdown-item" href="#">Future Leaders Challenge</a>
-                    {% endif %}
-                </div>
-            </li>
-            {% if page.url == "/our-team.html" %}
-                <li class="nav-item active">
-            {% else %}
-                <li class="nav-item">
-            {% endif %}
-                <a class="nav-link" href="#">Our Team</a>
-            </li>
-            {% if page.url == "/partner-with-us.html" %}
-                <li class="nav-item active">
-            {% else %}
-                <li class="nav-item">
-            {% endif %}
-                <a class="nav-link" href="#">Partner With Us</a>
-            </li>
-            {% if page.url == "/connect-with-us.html" %}
-                <li class="nav-item active">
-            {% else %}
-                <li class="nav-item">
-            {% endif %}
-                <a class="nav-link" href="#">Connect With Us</a>
-            </li>
+            {% for item in site.data.navigation.main_items %}
+                {% if page.url == item.url %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ item.preferred_url }}">{{ item.title }}</a>
+                    </li>
+                {% elsif page.url contains item.url_contains and item.sub_items and item.dropdown_id %}
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link" href="#" id="{{ item.dropdown_id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ item.title }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="{{ item.dropdown_id }}">
+                            {% for sub_item in item.sub_items %}
+                                {% if page.url == sub_item.url %}
+                                    <a class="dropdown-item active" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
+                                {% else %}
+                                    <a class="dropdown-item" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                {% elsif item.sub_items and item.dropdown_id %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="{{ item.dropdown_id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ item.title }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="{{ item.dropdown_id }}">
+                            {% for sub_item in item.sub_items %}
+                                <a class="dropdown-item" href="{{ sub_item.preferred_url }}">{{ sub_item.title }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ item.preferred_url }}">{{ item.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </div>
 </nav>
+{% endif %}

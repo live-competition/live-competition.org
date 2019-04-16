@@ -1,122 +1,21 @@
 <!doctype html>
 <html lang="en-CA">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <title>{{ page.title }} - {{ site.title }}</title>
-		<!-- Icons -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-		<!-- Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" />
-		<!-- Main Stylesheet: Livestrap -->
-		<link rel="stylesheet" href="/assets/css/livestrap.css" />
-		<style type="text/css">
-			@font-face{
-				font-family:"futura-pt-bold";
-				src:url("/assets/font/FuturaPTBold.otf") format("woff"),
-				url("/assets/font/FuturaPTBold.otf") format("opentype"),
-				url("/assets/font/FuturaPTBold.otf") format("truetype");
-			}
-
-			.text-secondary {
-				font-family: "futura-pt-bold";
-			}
-
-			.nav-footer a {
-				color: #000;
-			}
-
-		</style>
-    <style>
-			.hero-bg-img {
-				background-repeat: no-repeat;
-			  background-attachment: fixed;
-				background-position: center; 
-				background-size: cover;
-				opacity: 0.6;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				position: absolute;
-				z-index: 5;
-			}
-	
-			.hero-bg-vid {
-				opacity: 0.6;
-				top: 50%;
-				left: 50%;
-				-webkit-transform: translate(-50%,-50%);
--moz-transform: translate(-50%,-50%);
-				bottom: 0;
-				right: 0;
-				position: absolute;
-				z-index: 5;
-				min-height: 100%;
-				min-width: 100%;
-				overflow: hidden;
-			}
-
-			.hero-container {
-				height: 22rem;
-				position: relative;
-				overflow: hidden;
-			}
-	
-			.hero-inner {
-				color: #fff;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				z-index: 10;
-				cursor: default;
-			}
-	
-			.hero-inner h1 {
-				font-family: "futura-pt-bold", "Nunito Sans", "Avenir", sans-serif;
-				text-shadow: 1px 1px 2px rgba(83, 83, 86, 0.7);
-				text-transform: uppercase;
-				margin: 0;
-			}
-	
-			.hero-inner .subtitle {
-				font-size: 1.25rem;
-				text-shadow: 1px 1px 2px rgba(83, 83, 86, 0.7);
-			}
-	
-		</style>
-		<style>
-			#loaded {
-				display: none;
-			}
-			html, body {
-				width: 100%;
-				height: 100%;
-			}
-			#loading {
-				width: 100%;
-				height: 100%;
-				position: relative;
-			}
-			#loading .loading-center {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			#loading .loading-center .animate {
-				-webkit-animation:spin 1.5s linear infinite;
-    		-moz-animation:spin 1.5s linear infinite;
-				 animation:spin 1.5s linear infinite;
-				 width: 50px;
-				 height: 50px;
-			}
-			@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-			@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-			@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-		</style>
-		{% contentblock styles %}
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <title>{{ page.title }} - {{ site.title }}</title>
+			<!-- Icons -->
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+			<!-- Fonts -->
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" />
+			<!-- Main Stylesheet: Livestrap -->
+			<link rel="stylesheet" href="/assets/css/livestrap.css" />
+			{% if page.custom_css %}
+				<!-- Page specific stylesheet(s) -->
+				{% for stylesheet in page.custom_css %}
+					<link rel="stylesheet" href="{{ stylesheet }}" />
+				{% endfor %}
+			{% endif %}
     </head>
     <body>
 			<div id="loading">
@@ -146,6 +45,11 @@
 					$("#loaded").show();
 				});
 			</script>
-			{% contentblock scripts %}
+			<!-- Page specific Javascript -->
+			{% if page.custom_js %}
+				{% for script in page.custom_js %}
+					<script src="{{ script }}"></script>
+				{% endfor %}
+			{% endif %}
 	</body>
 </html>
