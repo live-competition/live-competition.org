@@ -15,7 +15,17 @@
   </div>
 </div>
 {% elsif page.hero_type == "video" and page.hero_bg_src %}
-
+<div class="hero-container bg-primary text-center">
+  <video autoplay controls muted class="hero-bg-vid">
+    <source id='mp4' src="{{ page.hero_bg_src }}" type='video/mp4'/>
+  </video>
+  <div class="hero-inner">
+    <h1 class="title">{{ page.hero_title }}</h1>
+    {% if page.hero_subtitle %}
+    <p class="subtitle">{{ page.hero_subtitle }}</p>
+    {% endif %}
+  </div>
+</div>
 {% else %}
 <div class="hero-container bg-primary text-center">
   <div class="hero-inner">
