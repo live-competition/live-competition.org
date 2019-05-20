@@ -4,6 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>{{ page.title }} - {{ site.title }}</title>
+    <!-- Search Engine -->
+    <meta name="description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
+    <meta name="image" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="LIVE Competition">
+    <meta itemprop="description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
+    <meta itemprop="image" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="LIVE Competition">
+    <meta name="twitter:description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
+    <meta name="twitter:image:src" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="LIVE Competition">
+    <meta name="og:description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
+    <meta name="og:image" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <meta name="og:url" content="https://live-competition.org">
+    <meta name="og:site_name" content="LIVE Competition">
+    <meta name="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/branding/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/branding/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/branding/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/branding/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/branding/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/assets/branding/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <!-- Fonts -->
@@ -41,7 +69,7 @@
     </div>
     {% include scripts.html %}
     <script>
-      $(window).ready("load", function() {
+      $(window).on("load", function() {
         $("#loading").hide();
         $("#loaded").show();
       });
