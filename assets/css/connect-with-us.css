@@ -36,7 +36,7 @@
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
--moz-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
     bottom: 0;
     right: 0;
     position: absolute;
@@ -115,3 +115,9 @@ html, body {
       color: #000;
       font-size: 1.25rem;
   }
+
+.banner
+{
+    align: center;
+    object-fit: scale-down;
+}
