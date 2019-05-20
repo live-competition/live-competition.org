@@ -9,6 +9,10 @@
     font-family: "futura-pt-bold";
 }
 
+.text-nunito {
+    font-family: "nunito-sans";
+}
+
 .nav-footer a {
     color: #000;
 }
