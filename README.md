@@ -107,4 +107,4 @@ The .editorconfig file should be present in every repository by LIVE Competition
 This repository takes advantage of [Github Pages](https://pages.github.com/) which hosts the live competition website directly from this repository. As Github Pages is powered by Jekyll behind the scenes, this repository will automatically generate to a static website. Learn more on the [Jekyll offical website](https://jekyllrb.com/docs/github-pages/).
 
 ## Author(s)
-Alvin Tang and the LIVE Competition development team.
+Alvin Tang, Andy Phy Lim and the LIVE Competition development team.
