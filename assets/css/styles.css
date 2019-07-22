@@ -1,0 +1,238 @@
+/**
+ * Global css styling.
+*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden
+}
+
+@font-face{
+    font-family:"futura-pt-bold";
+    src:url("/assets/font/FuturaPTBold.otf") format("woff"),
+    url("/assets/font/FuturaPTBold.otf") format("opentype"),
+    url("/assets/font/FuturaPTBold.otf") format("truetype");
+}
+
+.font-primary {
+    font-family: "Nunito Sans", "Avenir", "Calibri", sans-serif;
+}
+
+.font-secondary {
+    font-family: "futura-pt-bold", "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+
+@media(min-width:576px) {
+    .text-sm-right {
+        text-align: right;
+    }
+
+    .text-sm-left {
+        text-align: right;
+    }
+}
+
+.nav-footer a {
+    color: #000;
+}
+
+/* Page loading */
+
+#loaded {
+    display: none;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading .loading-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loading .loading-center .animate, .loading-animation {
+    -webkit-animation:spin 1.5s linear infinite;
+    -moz-animation:spin 1.5s linear infinite;
+     animation:spin 1.5s linear infinite;
+     width: 50px;
+     height: 50px;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/* Hero (Covers) */
+
+.hero-bg-img {
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 5;
+}
+
+.hero-bg-vid {
+    opacity: 0.8;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 5;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.hero-container {
+    height: 35rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-inner {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: default;
+}
+
+.hero-inner h1 {
+    font-family: "futura-pt-bold", "Nunito Sans", "Avenir", sans-serif;
+    text-shadow: 1px 1px 2px rgba(83, 83, 86, 0.7);
+    text-transform: uppercase;
+    margin: 0 2rem;
+}
+
+.hero-inner .subtitle {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(83, 83, 86, 0.7);
+}
+
+/* Person cards */
+
+.person-card {
+    width: 100%;
+    min-height: 10rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.person-card.left {
+    background-image: url('/assets/img/person-card/left.png');
+}
+
+.person-card.right {
+    background-image: url('/assets/img/person-card/right.png');
+}
+
+.person-card img {
+    text-align: center;
+    height: 230px;
+    padding: 1rem;
+}
+
+@media(max-width: 992px) {
+    .person-card img {
+        height: 180px;
+    }
+}
+
+/* Left timeline */
+
+@media(min-width:768px) {
+
+    .row .col-container {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .row .left-timeline {
+        padding-left: 6.5rem;
+    }
+
+    .row .left-timeline::before {
+        content: '';
+        position: absolute;
+        left: 1rem;
+        width: 0.5rem;
+        background-color: #00aef2;
+        z-index: 4;
+    }
+
+    .row .left-timeline .lt-ellipse::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #fff;
+        border: 0.35rem solid #00aef2;
+        border-radius: 1.5rem;
+        z-index: 5;
+    }
+
+    .row .left-timeline.lt-begin::before {
+        height: 50%;
+        bottom: 0;
+    }
+
+    .row .left-timeline.lt-begin .lt-ellipse::before {
+        bottom: 49%;
+    }
+
+    .row .left-timeline.lt-inbetween::before {
+        height: 100%;
+    }
+
+    .row .left-timeline.lt-inbetween .lt-ellipse::before {
+        top: 49.25%;
+    }
+
+    .row .left-timeline.lt-end::before {
+        height: 50%;
+        top: 0;
+    }
+
+    .row .left-timeline.lt-end .lt-ellipse::before {
+        top: 49%;
+    }
+
+}
+
+.owl-carousel .item {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+}
+
+.social-media-list .list-inline-item a {
+    color: #000;
+    font-size: 1.25rem;
+}

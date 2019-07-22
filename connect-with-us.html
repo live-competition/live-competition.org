@@ -3,10 +3,11 @@
 title: Connect With Us
 layout: default
 hero: true
-hero_bg_src: /assets/img/hero-bg/connect-with-us.jpg
+hero_bg_src: /assets/img/connect-with-us/cover.jpg
 hero_type: image
 hero_title: Have questions?
-hero_subtitle: We have answers
+custom_css:
+- /assets/css/page-specific/connect-with-us.css
 custom_js:
 - /assets/js/connect-with-us.js
 - https://maps.googleapis.com/maps/api/js?key=AIzaSyB29Sj2dHLRYDZcwJKMpqNEbw8P1jpZG1s&callback=initMap
@@ -14,8 +15,8 @@ custom_js:
 
 <div class="container py-5">
 	<div class="row">
-		<div class="col-md">
-			<h2 style="font-weight:700">Connect with us.</h2>
+		<div class="col-md" data-aos="fade-up">
+			<h2 class="font-primary font-weight-bold" style="text-transform: none">We have answers</h2>
 			<address>
 				Reach out to us directly or at <a href="mailto:contact@live-competition.org">contact@live-competition.org</a>.
       </address>
@@ -26,35 +27,35 @@ custom_js:
         <p class="mb-0"><strong>A server error has occured.</strong> We apologize for the inconvenience and we hope you can send your message to <a class="text-white" href="mailto:contact@live-competition.org">contact@live-competition.org</a> instead.</a></p>
       </div>
 			<form id="contactForm" method="POST" action="https://us-central1-live-competition-org.cloudfunctions.net/process_email_form" novalidate>
-				<div class="form-group">
+				<div class="form-group" data-aos="fade-right">
 					<label for="yourEmail">Your email</label>
           <input name="from" type="email" class="form-control" id="yourEmail" placeholder="foobar@example.com" required />
           <div class="invalid-feedback">
             Please provide a valid email address.
           </div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" data-aos="fade-right">
 					<label for="subject">Subject</label>
           <input name="subject" type="text" class="form-control" id="subject" required />
           <div class="invalid-feedback">
             Please provide a valid subject.
           </div>
 				</div>
-				<div class="form-group">
+				<div class="form-group" data-aos="fade-right">
 					<label for="message">Message</label>
           <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
           <div class="invalid-feedback">
             Please provide a valid message.
           </div>
 				</div>
-				<input type="submit" class="btn btn-primary" value="Send now" id="submitContactForm" />
+				<input type="submit" class="btn btn-primary" value="Send now" id="submitContactForm" data-aos="fade-right" data-aos-offset="0" />
 			</form>
 		</div>
 		<div class="col-md pt-5 pt-md-0">
 			<ul class="list-inline social-media-list">
 				<li class="list-inline-item">
 					<a href="https://www.facebook.com/LIVECompetition/" target="_blank" data-toggle="tooltip" data-placement="top" title="Like us on Facebook">
-						<i class="fab fa-facebook-f"></i>
+						<i class="fab fa-facebook"></i>
 					</a>
 				</li>
 				<li class="list-inline-item">
@@ -67,7 +68,7 @@ custom_js:
 				<div id="map">
 				</div>
 			</div>
-			<address class="mb-0">
+			<address class="mb-0" data-aos="fade-in" data-aos-duration="1500">
 				<strong>LIVE Competition</strong><br/>
 				University of Toronto, Scarborough<br/>
 				Instructional Centre<br/>
