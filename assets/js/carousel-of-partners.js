@@ -1,39 +1,25 @@
-$('#carouselPartners').slick({
-    centerMode: true,
-    dots: false,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    lazyLoad: 'ondemand',
-    draggable: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    responsive: [
-        {
-        breakpoint: 1024,
-        settings: {
-            slidesToShow: 3,
-            draggable: true,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: false,
-            autoplaySpeed: 1000
+$(document).ready(function() {
+    var partnerCarousel = $('.owl-carousel');
+    partnerCarousel.owlCarousel({
+        items: 6,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        smartSmooth: 1000,
+        dots: false,
+        responsive: {
+            0: {
+                items: 2
+            },
+            576: {
+                items: 4
+            },
+            768: {
+                items: 5
+            },
+            992: {
+                items: 6
+            }
         }
-        },
-        {
-        breakpoint: 600,
-        settings: {
-            slidesToShow: 2,
-            draggable: true,
-            slidesToScroll: 2,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 1000,
-        }
-        },
-        {
-        breakpoint: 480,
-        settings: "unslick"
-        }
-    ]
+    });
 });
