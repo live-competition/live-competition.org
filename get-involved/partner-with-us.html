@@ -4,7 +4,89 @@ title: Partner With Us
 layout: default
 hero: true
 hero_bg_src: /assets/img/get-involved/partner-with-us/cover.jpg
+custom_css:
+- https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css
 hero_type: image
 hero_title: Partner With Us
+custom_js:
+- https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js
+- /assets/js/carousel-of-partners.js
 ---
-<p class="m-5 text-center">To be done by Andy.</p>
+<div class="container py-5">
+  <span class="text-secondary text-center pt-5">
+    <h2 class="h1 text-uppercase" data-aos="fade-right">Why get involved?</h2>
+  </span>
+  <!-- Icons -->
+  <div class="container px-md-5 text-center">
+    <div class="row pt-4">
+      <!-- Curriculum Icon -->
+      <div class="col-sm">
+        <div class="px-5 px-sm-0" data-aos="fade-left">
+          <img src="/assets/img/icons/curriculum-final-g.png" class="img-fluid px-5 px-sm-0 px-md-5">
+        </div>
+        <span class="font-secondary h2 d-block m-0 mt-3" data-aos="fade-left">Curriculum</span>
+        <span class="text-center m-0 mt-3">
+          <p class="pt-3" data-aos="fade-left">Place our delegates to the test on your own terms. You have the chance to shape your competition rounds according to your needs! Our Curriculum Team will ensure that our rounds are exactly what you are looking for.</p>
+        </span>
+      </div>
+      <!-- Marketing Icon -->
+      <div class="col-sm">
+        <div class="px-5 px-sm-0 pt-5 pt-sm-0" data-aos="fade-up">
+          <img src="/assets/img/icons/marketing-final-g.png" class="img-fluid px-5 px-sm-0 px-md-5">
+        </div>
+        <span class="font-secondary h2 d-block m-0 mt-3" data-aos="fade-up">Marketing</span>
+        <span class="text-center m-0 mt-3">
+          <p class="pt-3" data-aos="fade-up">Get your brand recognized within the undergraduate community by showing that you are invested in their development and creating those relationships early!</p>
+        </span>
+      </div>
+      <!-- Recruitment Icon -->
+      <div class="col-sm">
+        <div class="px-5 px-sm-0 pt-5 pt-sm-0" data-aos="fade-right">
+          <img src="/assets/img/icons/employee-final-g.png" class="img-fluid px-5 px-sm-0 px-md-5">
+        </div>
+        <span class="font-secondary h2 d-block m-0 mt-3" data-aos="fade-right">Recruitment</span>
+        <span class="text-center m-0 mt-3">
+          <p class="pt-3" data-aos="fade-right">Get ready to meet some of the brightest students across Canada! Enter the undergraduate network to capitalize on fresh ideas and sted talents.</p>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- Carousel -->
+  <div class="container py-5 text-center" data-aos="fade-up">
+    <h2 class="font-secondary text-primary h1 mb-4">Past Partners</h2>
+    <div class="px-3 px-md-0">
+      {% include carousel-of-partners.html %}
+    </div>
+  </div>
+  <!-- Corporate Relation Contact -->
+  <div class="py-5">
+    <span class="text-secondary py-5">
+      <h2 class="text-uppercase" data-aos="fade-left">Interested? Contact Us</h2>
+    </span>
+    <div class="row">
+      <div class="col-sm-5 text-center">
+        <div class="person-card left mb-1" data-aos="zoom-out">
+          <img src="/assets/img/our-team/corporate-relations/laith.png" alt="Laith Alsayed" data-aos="fade-left"/>
+        </div>
+      </div>
+      <div class="col-sm-7 pt-md-5" data-aos="fade-left">
+        <p class="font-secondary h3 m-0">Laith Alsayed</p>
+        <p class="m-0 font-weight-bold" style="font-size:1.25rem">Vice President of Corporate Relations</p>
+        <p class="m-0">Third Year, Management</p>
+        <p class="m-0 text-muted">Specializing in International Business, Finance</p>
+        <ul class="list-inline social-media-list mt-2">
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/laith-alsayed/" target="_blank" data-toggle="tooltip" data-placement="top" title="Connect on Linkedin">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:laith.alsayed@mail.utoronto.ca" data-toggle="tooltip" data-placement="top" title="Send an Email">
+              <i class="fas fa-at"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
