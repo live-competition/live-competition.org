@@ -16,19 +16,19 @@ main_items:
 - title: Our Team
   url: /our-team.html
   preferred_url: /our-team
-- title: Partner With Us
-  url: /get-involved/partner-with-us.html
-  preferred_url: /get-involved/partner-with-us
-# - title: Get Involved
-#   dropdown_id: mainItemsDropdownGetInvolved
-#   url_contains: /get-involved
-#   sub_items:
-#     - title: Campus Brand Managers
-#       url: /get-involved/campus-brand-managers.html
-#       preferred_url: /get-involved/campus-brand-managers
-#     - title: Partner With Us
-#       url: /get-involved/partner-with-us.html
-#       preferred_url: /get-involved/partner-with-us
+# - title: Partner With Us
+#   url: /get-involved/partner-with-us.html
+#   preferred_url: /get-involved/partner-with-us
+- title: Get Involved
+  dropdown_id: mainItemsDropdownGetInvolved
+  url_contains: /get-involved
+  sub_items:
+    - title: Campus Brand Managers
+      url: /get-involved/campus-brand-managers.html
+      preferred_url: /get-involved/campus-brand-managers
+    - title: Partner With Us
+      url: /get-involved/partner-with-us.html
+      preferred_url: /get-involved/partner-with-us
 - title: Connect With Us
   url: /connect-with-us.html
   preferred_url: /connect-with-us
