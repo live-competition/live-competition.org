@@ -6,20 +6,20 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <!-- Search Engine -->
     <meta name="description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
-    <meta name="image" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <meta name="image" content="https://live-competition.org/assets/img/homepage/live-thumbnail.png">
     <!-- Schema.org for Google -->
     <meta itemprop="name" content="LIVE Competition">
     <meta itemprop="description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
-    <meta itemprop="image" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <meta itemprop="image" content="https://live-competition.org/assets/img/homepage/live-thumbnail.png">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="LIVE Competition">
     <meta name="twitter:description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
-    <meta name="twitter:image:src" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <meta name="twitter:image:src" content="https://live-competition.org/assets/img/homepage/live-thumbnail.png">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta name="og:title" content="LIVE Competition">
     <meta name="og:description" content="LIVE believes in being the ultimate recruiting platform to showcase elite talent amongst our partners and delegates.">
-    <meta name="og:image" content="https://live-competition.org/assets/img/hero-bg/live-homepage-banner.jpg">
+    <meta name="og:image" content="https://live-competition.org/assets/img/homepage/live-thumbnail.png">
     <meta name="og:url" content="https://live-competition.org">
     <meta name="og:site_name" content="LIVE Competition">
     <meta name="og:type" content="website">
@@ -37,8 +37,10 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" />
     <!-- Main Stylesheet: Livestrap -->
-    <link rel="stylesheet" href="/assets/css/livestrap.css" />
-    <link rel="stylesheet" href="/assets/css/custom-all.css" />
+    <link rel="stylesheet" href="/assets/css/livestrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     {% if page.custom_css %}
     <!-- Page specific stylesheet(s) -->
     {% for stylesheet in page.custom_css %}
@@ -49,7 +51,7 @@
   <body>
     <div id="loading">
       <div class="loading-center text-center">
-        <img src="/assets/img/brand/icon.png" class="animate" />
+        <img src="/assets/branding/live/icon.png" alt="LIVE Competition Icon" class="animate" />
         <noscript>
           <p class="mt-4">
             <strong>You need to have JavaScript enabled to view this page.</strong>

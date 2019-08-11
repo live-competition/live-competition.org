@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-    // Enable tooltip for all those with data-toggle="tooltip" attribute
-    $('[data-toggle="tooltip"]').tooltip()
-
     // Contact form functionality
     // Note that all validation should be done client side, other error messages will prompt server error alert
     var emailForm = document.getElementById('contactForm');
@@ -59,7 +56,7 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: icBuilding,
         map: map,
-        icon: "https://liveportal2019.blob.core.windows.net/static/branding/favicon-32x32.png"
+        icon: "https://live-competition.org/assets/branding/favicons/favicon-32x32.png"
     });
 
 }

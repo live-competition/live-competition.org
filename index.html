@@ -2,78 +2,129 @@
 # Template variables
 title: Homepage
 layout: default
-hero: true
-hero_bg_src: /assets/img/hero-bg/live-homepage-banner.JPG
-hero_type: image
-hero_title: LIVE Competition
-hero_subtitle: Dare to compete
+hero: false
 custom_css:
-- https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css
-- https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css
+- /assets/css/page-specific/index.css
+- https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css
 custom_js:
-- https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js
+- /assets/js/instagram-fetch.js
+- https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js
 - /assets/js/carousel-of-partners.js
 ---
 
-<div class="container py-5">
-  <div class="row mx-md-5">
-    <div class="col">
-      <img src="/assets/img/brand/banner.png" alt="We host two national competitons" class="img-fluid">
-      <div class="row">
-        <div class="col-sm">
-          <img src="/assets/img/homepage-imgs/live-img.png" class="img-fluid py-3">
-          <p>The Future Leaders Challenge (FLC) is an innovative business case competition designed to give high school students with a passion for business the opportunity to face the risk, challenges, and rewards of managing their own companies. </p>
-        </div>
-        <div class="col-sm">
-          <img src="/assets/img/homepage-imgs/flc-img.png" class="img-fluid py-3">
-          <p>LIVE Competition is a two-day national multidisciplinary case competition that brings together elite talent for delegates showcase their academic and professional skills while gaining practical knowledge in a realistic and interactive business environment.</p>
+<div id="homepageCover">
+  <div class="py-5 container px-4 px-md-0">
+    <div class="row">
+      <div class="col-sm-3 col-md-4 p-0" data-aos="fade-left">
+        <div class="px-5 px-sm-0">
+          <img src="/assets/img/homepage/live-icon.png" alt="LIVE Competition Icon" class="img-fluid px-5 px-sm-0" />
         </div>
       </div>
-      <img src="/assets/img/homepage-imgs/canada-leading-undergrad-casecomp.png" alt="Canada's Leading Undergraduate Business Competition" class="img-fluid pt-5 d-block mx-auto">
-      <img src="/assets/img/homepage-imgs/numbers.png" alt="160 Delegates, 15+ Universities, $6000 Dollars in Pricing" class="img-fluid d-block mx-auto" class="pt-1">
-      <div class="row pb-5 pt-5">
-        <div class="col-md col-sm-6">
-          <img src="/assets/img/homepage-imgs/grid-img-1.jpg" class="img-fluid py-1">
-        </div>
-        <div class="col-md col-sm-6">
-          <img src="/assets/img/homepage-imgs/grid-img-2.jpg" class="img-fluid py-1">
-        </div>
-        <div class="col-md col-sm-6">
-          <img src="/assets/img/homepage-imgs/grid-img-3.jpg" class="img-fluid py-1">
-        </div>
-        <div class="col-md col-sm-6">
-          <img src="/assets/img/homepage-imgs/grid-img-4.jpg" class="img-fluid py-1">
+      <div class="col-sm-9 col-md-8 p-0" data-aos="fade-right">
+        <div class="pt-0 pt-md-5 text-center text-sm-left">
+          <h1 class="display-1 d-lg-inline">Live</h1>
+          <h2 class=" display-1 d-none d-lg-inline"><br/>Competition</h2>
+          <h1 class="d-lg-none">Live Competitions</h1>
+          <h2 class="h3 d-md-none">Canada's Leading Business Case Competition</h2>
+   	      <h2 class="d-none d-md-inline-block">Canada's Leading Business Case Competition</h2>
         </div>
       </div>
-
-      <h2 class="text-uppercase text-secondary pt-5 h1">Our Mission</h2>
-      <p>LIVE believes in being a platform to showcase elite talent amongst partners and delegates.</p>
-
-      <a href="/partner-with-us">
-      <img src="/assets/img/homepage-imgs/get-involved.png" alt="Partner with us" class="img-fluid py-5">
-      </a>
-
-      <h2 class="text-uppercase text-secondary pt-5 h1">2019 Partners</h2>
-      <div id="carouselPartners" class="pt-2">
-        <div><img src="/assets/img/sponsor-carousel/microsoft.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/nestle.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/fidelity.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/telus.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/mnp.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/cfa.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/utscmgmt.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/linkedin.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/kpmg.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/rogers.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/t-shirtelephant.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/kind.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/stickerwithyou.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/kernels.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/hellofresh.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/jackorg.png" style="width: 75%;"></div>
-        <div><img src="/assets/img/sponsor-carousel/acehill.png" style="width: 75%;"></div>
+    </div>
+  </div>
+</div>
+<div class="bg-light p-5">
+  <div class="container py-md-5 text-center">
+    <div class="px-md-5" data-aos="fade-up" data-aos-duration="1600" data-aos-offset="80">
+      <div class="px-md-5">
+        <div class="px-lg-5">
+          <h2 class="font-secondary text-primary text-uppercase h1">Leading Innovative Visions To Execution</h2>
+          <p class="m-0 mt-4">Entering our fourteenth year of operations, LIVE hosts the best and brightest students from all over Canada in an immersive business case competition.</p>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="py-5 text-center">
+  <div class="container px-md-5">
+    <h2 class="font-secondary text-primary h1" data-aos="fade-up">Our Events</h2>
+    <div class="row px-lg-5 pt-4">
+      <div class="col-md text-left pr-md-4" data-aos="fade-right">
+        <img src="/assets/img/homepage/flc-thumbnail.png" class="img-fluid" />
+        <p class="mt-4 pb-2" data-aos="zoom-out-right">Future Leaders Challenge (FLC) is an innovative business case competition designed to give high school students, with a passion for business, the opportunity to face the risk, challenges, and rewards of managing their own companies.</p>
+      </div>
+      <div class="col-md text-left pl-md-4" data-aos="fade-left">
+        <img src="/assets/img/homepage/live-thumbnail.png" class="img-fluid" />
+        <p class="mt-4" data-aos="zoom-out-left">LIVE Competition is a two-day multidisciplinary case competition that brings together elite talent for delegates to showcase their academic and professional skills while gaining practical knowledge in a realistic and interactive business environment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-light py-5">
+  <div class="container px-md-5 text-center">
+    <h2 class="font-secondary text-primary h1" data-aos="fade-up">The Stats</h2>
+    <div class="row pt-4">
+      <div class="col-sm" data-aos="fade-left">
+        <div class="px-5 px-sm-0">
+          <img src="/assets/img/icons/employee-final-g.png" class="img-fluid px-5 px-sm-0 px-md-5">
+        </div>
+        <span class="font-secondary h2 d-block m-0 mt-3">160</span>
+        <span class="stat-item">Delegates</span>
+      </div>
+      <div class="col-sm" data-aos="fade-up">
+        <div class="px-5 px-sm-0 pt-5 pt-sm-0">
+          <img src="/assets/img/icons/university-final-g.png" class="img-fluid px-5 px-sm-0 px-md-5">
+        </div>
+        <span class="font-secondary h2 d-block m-0 mt-3">10+</span>
+        <span class="stat-item">Universities</span>
+      </div>
+      <div class="col-sm" data-aos="fade-right">
+        <div class="px-5 px-sm-0 pt-5 pt-sm-0">
+          <img src="/assets/img/icons/trophy-final-g.png" class="img-fluid px-5 px-sm-0 px-md-5">
+        </div>
+        <span class="font-secondary h2 d-block m-0 mt-3">$6000</span>
+        <span class="stat-item">Dollars in Prizing</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-5 text-center">
+  <div class="container px-md-5" data-aos="fade-up">
+    <h2 class="font-secondary text-primary h1">Our Mission</h2>
+    <p class="pt-3">LIVE believes in being a platform to showcase elite talent amongst partners and delegates.</p>
+  </div>
+</div>
+<div class="py-5 text-center" id="judgesCover">
+  <div class="py-5 container" data-aos="zoom-out-up" data-aos-duration="1500">
+    <h2 class="font-secondary text-white display-4 mb-4">Get Involved</h2>
+    <a href="/get-involved/partner-with-us" class="btn btn-primary">Corporate Sponsorship</a>
+  </div>
+</div>
+<div class="container py-5 text-center" data-aos="fade-up">
+  <h2 class="font-secondary text-primary h1 mb-4">Past Partners</h2>
+  <div class="px-3 px-md-0">
+    {% include carousel-of-partners.html %}
+  </div>
+</div>
+<div class="container py-5" id="letsGetSocial">
+  <h2 class="font-secondary text-primary h1 m-0" data-aos="fade-left">Let's Get Social</h2>
+  <p class="m-0" data-aos="fade-up"><a href="https://www.instagram.com/livecompetition/" target="_blank" class="text-muted text-decoration-none"><i class="fab fa-instagram fa-lg"></i>&nbsp;&nbsp;@livecompetition</a></p>
+  <div data-aos="fade-up" id="instagramFetchLoading" class="text-center mt-5 p-5 bg-light">
+    <img src="/assets/branding/live/icon.png" alt="LIVE Competition Icon" class="loading-animation" />
+    <p class="m-0 mt-3"><strong>Loading...</strong></p>
+  </div>
+  <div id="instagramFeed" style="display:none;" class="pb-5">
+    <style>
+      .ig-post img:hover {
+        opacity: 0.6;
+      }
+    </style>
+    <div class="row">
+      <div class="ig-post col-6 col-md-4 pt-5"></div>
+      <div class="ig-post col-6 col-md-4 pt-5"></div>
+      <div class="ig-post col-6 col-md-4 pt-5"></div>
+      <div class="ig-post col-6 col-md-4 pt-5"></div>
+      <div class="ig-post col-6 col-md-4 pt-5"></div>
+      <div class="ig-post col-6 col-md-4 pt-5"></div>
     </div>
   </div>
 </div>
