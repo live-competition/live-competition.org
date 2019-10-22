@@ -1,5 +1,6 @@
 #homepageCover {
-    background-image: url('/assets/vid/event/live-competition/cover.mp4');
+    background-image: url('/assets/vid/event/live-competition/media.io_cover.mov');
+    /* background-image: url('/assets/img/event/live-competition/cover.png'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
