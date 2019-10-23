@@ -6,7 +6,7 @@ function initMap() {
     // Init the map
     var map = new google.maps.Map(document.getElementById('map'), {
         center: hotel,
-        zoom: 14,
+        zoom: 17,
         disableDefaultUI: true
     });
 
