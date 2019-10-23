@@ -56,7 +56,7 @@ title: Page Title
 ```
 
 #### Hero
-A hero is a cover with a video/image and text placed on top. To enable a hero on the page, set a front matter variable of ```hero``` to ```true```. There are three hero types (```video```, ```image``` or ```null```). If ```video``` or ```image``` is picked, a ```hero_bg_src``` must be provided as well as a ```hero_title```. A ```hero_subtitle``` is optional.
+A hero is a cover with a video/image and text placed on top. To enable a hero on the page, set a front matter variable of ```hero``` to ```true```. There are three hero types (```video```, ```image``` or ```null```). If ```video``` or ```image``` is picked, a ```hero_bg_src``` must be provided as well as a ```hero_title```. A ```hero_subtitle``` and ```hero_button``` is optional.
 
 Example of hero with image background with subtitle:
 ```
@@ -70,7 +70,20 @@ hero_subtitle: Subtitle
 ---
 ```
 
-Example of hero with no background without a subtitle:
+Example of hero with image background with subtitle and button:
+```
+---
+...
+hero: true
+hero_type: image
+hero_bg_src: /assets/img/hero-bg/image.jpg
+hero_title: Title
+hero_subtitle: Subtitle
+hero_button: Link
+---
+```
+
+Example of hero with no background with no subtitle or button:
 ```
 ---
 ...
