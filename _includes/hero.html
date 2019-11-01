@@ -33,6 +33,23 @@
     {% endif %}
   </div>
 </div>
+<!---->
+{% elsif page.hero_type == "video_reg" and page.hero_bg_src %}
+<div class="hero-container bg-primary text-center" data-aos="fade" data-aos-offset="0" data-aos-delay="0">
+  <video autoplay muted loop class="hero-bg-vid"{% if page.hero_poster_src %}poster="{{ page.hero_poster_src }}"{% endif %}>
+    <source id='mp4' src="{{ page.hero_bg_src }}" type='video/mp4' />
+  </video>
+  <div class="hero-inner">
+    <h1 class="title display-4 d-none d-md-block">{{ page.hero_title }}</h1>
+    <h1 class="title h1 d-block d-md-none">{{ page.hero_title }}</h1>
+    {% if page.hero_subtitle %}
+    <p class="subtitle">{{ page.hero_subtitle }}</p>
+    <a href="https://blueboard.live/register" class="btn btn-primary d-md-none" role="button" aria-pressed="true">Register Now</a>
+    <a href="https://blueboard.live/register" class="btn btn-primary d-none d-md-inline-block" role="button" aria-pressed="true">Register Now</a>
+    {% endif %}
+  </div>
+</div>
+<!---->
 {% else %}
 <div class="hero-container bg-primary text-center" data-aos="fade" data-aos-offset="0" data-aos-delay="0">
   <div class="hero-inner">
