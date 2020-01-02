@@ -8,11 +8,6 @@
     {% if page.hero_subtitle %}
     <p class="subtitle">{{ page.hero_subtitle }}</p>
     {% endif %}
-    {% if page.hero_button %}
-    <div class="px-md-5" data-aos="zoom-out-up" data-aos-duration="1500">
-      <a href="{{ page.hero_button }}" target = blank class="btn btn-primary mt-4 mb-1">Register Today!</a>
-    </div>
-    {% endif %}
   </div>
 </div>
 {% elsif page.hero_type == "video" and page.hero_bg_src %}
