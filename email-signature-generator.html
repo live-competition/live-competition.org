@@ -7,62 +7,80 @@ hero_title: Email Signature
 hero_subtitle: Generator
 custom_js:
 - /assets/js/email-signature-generator.js
+custom_css:
+- /assets/css/page-specific/email-signature-generator.css
 ---
 
 <div class="container py-5">
-	<div class="row">
-		<div class="col-md">
-			<h2 style="font-weight:700">Generator</h2>
-      <p>Fill in all the details below, click submit and then copy and paste in your email client. Steps described in Google Drive ZIP folder. Takes the pain away from steps 1-5 described in the README.txt file.</p>
-			<form onSubmit="generatees()" novalidate>
-				<div class="form-group">
-					<label for="firstName">First Name</label>
+  <div class="row">
+    <div class="col-md">
+      <h2 style="font-weight:700">Generator</h2>
+      <p>Fill in all the details below, click submit and then copy and paste in your email client. Steps described in
+        Google Drive ZIP folder. Takes the pain away from steps 1-5 described in the README.txt file.</p>
+      <form onSubmit="generatees()" novalidate>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
           <input name="firstName" type="text" class="form-control" id="firstName" placeholder="Alvin" required />
-				</div>
-				<div class="form-group">
-					<label for="lastName">Last Name</label>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
           <input name="lastName" type="text" class="form-control" id="lastName" placeholder="Tang" required />
-				</div>
-				<div class="form-group">
-					<label for="position">Position</label>
-          <input name="position" type="text" class="form-control" id="position" placeholder="Vice President of Information Technology" required />
-				</div>
-				<div class="form-group">
-					<label for="number">Phone Number</label>
+        </div>
+        <div class="form-group">
+          <label for="position">Position</label>
+          <input name="position" type="text" class="form-control" id="position"
+            placeholder="Vice President of Information Technology" required />
+        </div>
+        <div class="form-group">
+          <label for="number">Phone Number</label>
           <input name="number" type="text" class="form-control" id="number" placeholder="(647) 785-8122" required />
-				</div>
-				<div class="form-group">
-					<label for="linkedinURL">Linkedin Profile URL</label>
-          <input name="linkedinURL" type="url" class="form-control" id="linkedinURL" placeholder="https://linkedin.com/in/alvintangz/" required />
-				</div>
-				<div class="form-group">
-					<label for="linkedinUsername">Linkedin Profile Username</label>
-          <input name="linkedinUsername" type="text" class="form-control" id="linkedinUsername" placeholder="alvintangz" required />
-				</div>
-				<input type="submit" class="btn btn-primary" value="Create Email Signature" id="submit" />
-			</form>
-		</div>
-		<div class="col-md pt-5 pt-md-0 border" id="selectAll">
+        </div>
+        <div class="form-group">
+          <label for="linkedinURL">Linkedin Profile URL</label>
+          <input name="linkedinURL" type="url" class="form-control" id="linkedinURL"
+            placeholder="https://linkedin.com/in/alvintangz/" required />
+        </div>
+        <div class="form-group">
+          <label for="linkedinUsername">Linkedin Profile Username</label>
+          <input name="linkedinUsername" type="text" class="form-control" id="linkedinUsername" placeholder="alvintangz"
+            required />
+        </div>
+        <input type="submit" class="btn btn-primary" value="Create Email Signature" id="submit" />
+      </form>
+    </div>
+    <div class="col-md pt-5 pt-md-0 border" id="selectAll">
+      <a id="copybtn" data-toggle="tooltip" data-placement="top" title="Copy to clipboard" onclick="copyes()">
+        <!-- icon from google's material design library -->
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+          width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" />
+          </svg>
+      </a>
       <div style="font-family:Calibri,Arial,Helvetica,sans-serif;color:black; margin: 5px 0 0;">
-        <img src="https://i.ibb.co/bFhpqQX/test1.png" width="180"><br/>
-        <b><span style="font-size:16px;" id="fillName">Alvin Tang</span></b><br/>
-        <span style="font-size:13px;color:#00aef2;"><b id="fillPosition">Vice President of Information Technology</b> / LIVE Competition XV</span><br/>
+        <img src="https://i.ibb.co/bFhpqQX/test1.png" width="180"><br />
+        <b><span style="font-size:16px;" id="fillName">Alvin Tang</span></b><br />
+        <span style="font-size:13px;color:#00aef2;"><b id="fillPosition">Vice President of Information Technology</b> /
+          LIVE Competition XV</span><br />
         <span style="font-size:13px;">University of Toronto Scarborough</span>
       </div>
-      <table cellpadding="0" cellspacing="0" width="200" border="0" style="font-family:Calibri,Arial,Helvetica,sans-serif;font-size:13px;margin:0;">
+      <table cellpadding="0" cellspacing="0" width="200" border="0"
+        style="font-family:Calibri,Arial,Helvetica,sans-serif;font-size:13px;margin:0;">
         <tr style="margin:0;padding:0;">
           <td width="30%">Mobile:</td>
-          <td width="70%" id="fillNumber">(xxx) xxx-xxxx<td>
+          <td width="70%" id="fillNumber">(xxx) xxx-xxxx
+          <td>
         </tr>
         <tr style="margin:0;padding:0;">
           <td width="30%">Linkedin:</td>
-          <td width="70%"><a href="https://linkedin.com/in/username/" style="color:#0086c7;" id="fillLinkedin">linkedin_username</a></td>
+          <td width="70%"><a href="https://linkedin.com/in/username/" style="color:#0086c7;"
+              id="fillLinkedin">linkedin_username</a></td>
         </tr>
         <tr style="margin:0;padding:0;">
           <td width="30%">Website:</td>
           <td width="70%"><a href="https://live-competition.org" style="color:#0086c7;">live-competition.org</a></td>
         </tr>
       </table>
-		</div>
-	</div>
+    </div>
+  </div>
 </div>
