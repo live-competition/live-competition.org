@@ -37,21 +37,21 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" />
     <!-- Main Stylesheet: Livestrap -->
-    <link rel="stylesheet" href="/assets/css/livestrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/livestrap.min.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
     <!-- Animate on scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     {% if page.custom_css %}
     <!-- Page specific stylesheet(s) -->
     {% for stylesheet in page.custom_css %}
-    <link rel="stylesheet" href="{{ stylesheet }}" />
+    <link rel="stylesheet" href="{{ stylesheet | relative_url }}" />
     {% endfor %}
     {% endif %}
   </head>
   <body>
     <div id="loading">
       <div class="loading-center text-center">
-        <img src="/assets/branding/live/icon.png" alt="LIVE Competition Icon" class="animate" />
+        <img src="{{ '/assets/branding/live/icon.png' | relative_url }}" alt="LIVE Competition Icon" class="animate" />
         <noscript>
           <p class="mt-4">
             <strong>You need to have JavaScript enabled to view this page.</strong>
@@ -79,7 +79,7 @@
     {% if page.custom_js %}
     <!-- Page specific Javascript -->
     {% for script in page.custom_js %}
-    <script src="{{ script }}"></script>
+    <script src="{{ script | relative_url }}"></script>
     {% endfor %}
     {% endif %}
 	</body>
